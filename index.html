@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Document</title>
+</head>
+<body>
+
+
+<div class="w-25 m-auto shadow-lg py-3 mt-5 rounded-4">
+    <div class="container ">
+        <h2 class="text-center py-2">products form</h2>
+        <div class="form-floating mb-3">
+            <input type="text" oninput="validateInputs(this)" class="form-control" id="productName" placeholder="">
+            <div class="alert alert-danger  mt-2">
+              Name should start with capital letter then 2 - 10 chars
+            </div>
+            <label for="floatingInput">Product Name</label>
+          </div>
+          <div class="form-floating mb-3">
+            <input type="number" oninput="validateInputs(this)"  class="form-control" id="productPrice" placeholder="">
+            <div class="alert alert-danger mt-2">
+              price must be between 10 - 999999 EGP
+            </div>
+            <label for="floatingInput">Product Price</label>
+          </div>
+          <div class="form-floating mb-4">
+            <input list="category" oninput="validateInputs(this)"  type="text" class="form-control" id="productCategory" placeholder="">
+            <div class="alert alert-danger mt-2">
+              Category should be tv or mobile or screens
+            </div>
+            <label for="productCategory">Product Category </label>
+    
+    
+            <datalist id="category">
+              <option  value="TV" />
+              <option  value="Mobile" />
+              <option  value="Screens" />
+              <option  value="Electronic" />
+            </datalist>
+          </div>
+    
+          <div class="form-floating mb-3">
+            <input type="text" oninput="validateInputs(this)"  class="form-control " id="productDesc" placeholder="">
+            <div class="alert alert-danger mt-2">
+              at least 3 chars
+            </div>
+            <label for="floatingInput">Product Describtion</label>
+          </div>
+          <div class="form-floating mb-4">
+
+            <input 
+            type="file" 
+            class="form-control" 
+            id="productImage" 
+            placeholder="">
+
+            <label for="productImage">Product Image </label>
+          </div>
+          <button class="btn btn-primary w-100"   onclick="addProduct()" >Add Product <i class="fa-solid fa-plus"></i></button>
+
+          <input oninput="search()" type="search" class="form-control w-100 mt-3" placeholder="search..." id="search" >
+    </div>
+
+</div>
+
+
+<div class="container py-5">
+  <div class="row" id="row">
+      
+  </div>
+</div>
+
+
+
+
+
+
+
+                        <!-- script -->
+    <script src="js/index.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
